@@ -30,9 +30,6 @@ public class InventoryServiceApplication {
             products.add(Product.builder().name("Headphones").price(199.99).quantity(100).build());
             products.add(Product.builder().name("Smartwatch").price(299.99).quantity(25).build());
             productRepository.saveAll(products);
-
         };
     }
-
-
 }

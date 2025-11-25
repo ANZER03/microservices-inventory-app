@@ -6,8 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import java.lang.reflect.GenericArrayType;
-
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Getter @Setter @Builder
 public class Product{
