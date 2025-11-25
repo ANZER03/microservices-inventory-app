@@ -8,17 +8,12 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8086/products
-Content-Type: application/x-www-form-urlencoded
-
-name = food &
-price = 100.00 &
-quantity = 50
-
-###
 GET http://localhost:8086/products/search/findByName?name=food
 Accept: application/json
 
 ###
 
+GET http://localhost:8086/products?sort=price,desc&page=0&size=3
+Accept: application/json
 
+###
