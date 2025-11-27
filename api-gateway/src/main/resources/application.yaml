@@ -20,3 +20,10 @@ spring:
       enabled: true
     config:
       enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true

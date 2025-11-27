@@ -1,3 +1,12 @@
+POST http://localhost:8888/CUSTOMER-SERVICE/customers
+Content-Type: application/json
+
+{
+  "name" : "Zij",
+  "email" : "nice"
+}
+
+###
 POST http://localhost:8086/products
 Content-Type: application/json
 
@@ -8,7 +17,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8086/products/search/findByName?name=food
+GET http://localhost:8888/CUSTOMER-SERVICE/customers
 Accept: application/json
 
 ###

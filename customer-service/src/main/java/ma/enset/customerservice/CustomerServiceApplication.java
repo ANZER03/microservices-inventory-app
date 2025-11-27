@@ -3,6 +3,7 @@ package ma.enset.customerservice;
 import ma.enset.customerservice.entities.Customer;
 import ma.enset.customerservice.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,6 +11,9 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class CustomerServiceApplication {
+
+    @Value("${app.name1}")
+    private String param1;
 
     public static void main(String[] args) {
 
@@ -27,6 +31,8 @@ public class CustomerServiceApplication {
                     .email("an@gmail.com")
                     .name("Anoir")
                     .build());
+
+            System.out.println("********** Param1 = " + param1);
         };
     }
 }

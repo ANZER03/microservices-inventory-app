@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.List;
 
-@Component
+//@Component
 public class CLI implements CommandLineRunner {
     final BillingRepository billingRepository;
     final ProductItemRepository productItemRepository;
