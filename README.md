@@ -26,7 +26,3 @@ The application consists of the following microservices:
 *   **Lombok**: To reduce boilerplate code.
 *   **Maven**: For build automation.
 *   **Docker**: For containerization of microservices.
-
-## Getting Started
-
-(This section will be updated later with detailed instructions.)
