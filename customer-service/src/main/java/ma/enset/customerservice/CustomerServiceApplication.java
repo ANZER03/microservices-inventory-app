@@ -11,10 +11,6 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class CustomerServiceApplication {
-
-    @Value("${app.name1}")
-    private String param1;
-
     public static void main(String[] args) {
 
         SpringApplication.run(CustomerServiceApplication.class, args);
@@ -31,8 +27,6 @@ public class CustomerServiceApplication {
                     .email("an@gmail.com")
                     .name("Anoir")
                     .build());
-
-            System.out.println("********** Param1 = " + param1);
         };
     }
 }

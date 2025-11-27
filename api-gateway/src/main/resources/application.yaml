@@ -5,17 +5,25 @@ spring:
         webflux:
           routes:
             - id: customer-service
-              uri : lb://CUSTOMER-SERVICE
+              uri: lb://CUSTOMER-SERVICE
               predicates:
                 - Path=/customers/**
-            - id : inventory-service
-              uri : lb://INVENTORY-SERVICE
+            - id: inventory-service
+              uri: lb://INVENTORY-SERVICE
               predicates:
                 - Path=/products/**
             - id: billing-service
               uri: lb://BILLING-SERVICE
               predicates:
                 - Path=/bills/**
+
+          globalcors:
+            cors-configurations:
+              "[/**]":
+                allowed-origins: "*"
+                allowed-methods: "*"
+                allowed-headers: "*"
+                allow-credentials: false
     discovery:
       enabled: true
     config:
@@ -25,5 +33,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery-service:8761/eureka/
-    register-with-eureka: true
     fetch-registry: true
+    register-with-eureka: true
